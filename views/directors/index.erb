@@ -1,0 +1,7 @@
+<h1>Welcome to The Directors Index</h1>
+
+<% @directors.each do |directors| %>
+    <div class="">
+      <a href="/directors/<%= directors[:id] %>"><%= directors[:name] %></a>
+    </div>
+  <% end %>

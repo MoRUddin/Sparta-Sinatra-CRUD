@@ -1,0 +1,22 @@
+<div class="">
+
+  <h1>Welcome to the
+    <%= @title %>
+    Page</h1>
+  <a href="/directors/<%= @director[:id] %>/edit">edit</a>
+  <form class="" action="/directors/<%= @director[:id] %>" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" name="" value="Delete">
+  </form>
+</div>
+
+<div class="">
+  <p><%= @body %></p>
+  <p><a href="/movies/<%= @director[:id] %>">Back to Movie</a></p>
+</div>
+
+<% @directors.each do |director| %>
+  <div class="">
+    <a href="/directors/<%= director[:id] %>"><%= director[:title] %></a>
+  </div>
+<% end %>

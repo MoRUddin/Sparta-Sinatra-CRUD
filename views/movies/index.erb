@@ -1,0 +1,8 @@
+<h1>Welcome to The Movies Index</h1>
+
+<% @movies.each do |movies| %>
+    <div class="">
+      <a href="/movies/<%= movies[:id] %>"><%= movies[:title] %></a>
+      <p><%= movies[:body] %></p>
+    </div>
+  <% end %>
